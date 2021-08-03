@@ -36,7 +36,15 @@ void arrayFunction(){
 void vectorFunction(){
     //Lambda function to roll dice between 1 and 6
     auto roll = [](){return rand() % 6 + 1; };
-    
+
+    //creates a container
+    vector<int> container;
+
+    //add one item to container
+    container.push_back(roll());
+
+    //figure out what this means
+    chrono::duration<double> durInsertTime(0);
 }
 int main(){
     

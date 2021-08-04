@@ -14,30 +14,40 @@ using namespace std;
 
 string getPassword(bool questionUpperCase, bool questionLowerCase, bool questionIntegers, bool questionSpecialint, int lengthOfPassword){
     
-    int listChoice;
     string password = "";
     int numberIterator = 0;
 
     srand(time(NULL));
     while(numberIterator < lengthOfPassword){
-        cin >> listChoice;
-
-        //listChoice = rand() % 4 + 1;
-        switch(listChoice){
-            case 1:
-                auto upperCaseListFront = listOfUppercase.begin();
-                int listUnder = rand() % 26 + 1;
-                advance(upperCaseListFront, listUnder);
-                password += *upperCaseListFront;
-                break;
-            //case 2:
-            //case 3:
-            // ase 4:
+        if(questionUpperCase == true){
+            auto upperCaseListFront = listOfUppercase.begin();
+            int listUpper= rand() % 26 + 1;
+            advance(upperCaseListFront, listUpper);
+            password += *upperCaseListFront;
+            numberIterator++;
         }
-        numberIterator++;
+        if(questionLowerCase == true){
+            auto lowerCaseListFront = listOfUndercase.begin();
+            int listUnder = rand() % 26 + 1;
+            advance(lowerCaseListFront, listUnder);
+            password += *lowerCaseListFront;
+            numberIterator++;
+        }
+        if(questionIntegers == true){
+            auto integerListFront = listOfIntegers.begin();
+            int listInteger = rand() % 9 + 0;
+            advance(integerListFront, listInteger);
+            password += *integerListFront;
+            numberIterator++;
+        }
+        if(questionSpecialint == true){
+            auto specialListFront = listOfSpecialCharacters.begin();
+            int specialInteger = rand() % 8 + 1;
+            advance(specialListFront, specialInteger);
+            password += *specialListFront;
+            numberIterator++;
+        }        
     }
-    
-    
     return password;
 }
 int main(){

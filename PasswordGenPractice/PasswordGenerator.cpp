@@ -64,7 +64,7 @@ int main(){
     cout << "Would you like capitalized letters?" << endl;
     cin >> choice;
     cout << endl;
-    if (choice == 'Y'){
+    if (choice == 'Y' || choice == 'y'){
         questionUpperCase = true;
     }
     else{
@@ -74,7 +74,7 @@ int main(){
     cout << "Would you like undercase letters?" << endl;
     cin >> choice;
     cout << endl;
-    if (choice == 'Y'){
+    if (choice == 'Y' || choice == 'y'){
         questionLowerCase = true;
     }
     else{
@@ -103,8 +103,6 @@ int main(){
 
     cout << getPassword(questionUpperCase, questionLowerCase, questionIntegers, questionSpecial, lengthOfPassword) << endl;
     
- 
- 
     return 0;
 
 }

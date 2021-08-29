@@ -18,6 +18,7 @@ public:
     void print(){
         for(int x = 0; x < totalItemsOnList; x++){
             cout << "Entery - " << x << ": " << listEntries[x].listEntry << endl;
+            
             if(listEntries[x].availibility == Open){
                 cout << "Status - Open" << endl;
             }
@@ -29,21 +30,30 @@ public:
             }
         }
     }
+    void deleteItem(string deletedItem){
+        for(int y = 0; y < totalItemsOnList; y++){
+            if(deletedItem == listEntries[y].listEntry){
+                listEntries[y].availibility = Deleted;
+            }
+        }
+        
+    }
     void crossOff(string editItem){
         for(int x = 0; x < 20; x++){
             if(listEntries[x].listEntry == editItem){
-                cout << "Test" << endl;
-                listEntries[x].availibility == Closed;
+                listEntries[x].availibility = Closed;
             }
         }
     }
     void add(string addingItem){
         listEntries[totalItemsOnList].listEntry = addingItem;
         listEntries[totalItemsOnList].availibility = Open;
+        
         totalItemsOnList++;
     }
     
 private:
+    //Keeps track of total item in the list, won't exceed 20 for now
     int totalItemsOnList;
     //creates a list of the type struct
     entries listEntries[20];
@@ -61,7 +71,8 @@ int main(){
         cout << "1 - Add Item" << "\n";
         cout << "2 - Cross Off Item" << "\n";
         cout << "3 - Delete Item" << "\n";
-        cout << "4 - Exit" << "\n";
+        cout << "4 - Print List" << "\n";
+        cout << "5 - Exit" << "\n";
         cin >> menuChoice;
 
         switch(menuChoice){
@@ -69,27 +80,25 @@ int main(){
                 cout << "Enter Item: ";
                 cin >> itemToAdd;
                 myList.add(itemToAdd);
-                //myList.print();
                 break;
             case 2:
                 cout << "Enter Item to Cross Off" << "\n";
                 cin >> itemToAdd;
                 myList.crossOff(itemToAdd);
-                myList.print();
                 break;
             case 3:
+                cout << "Enter Item to Delete" << "\n";
+                cin >> itemToAdd;
+                myList.deleteItem(itemToAdd);
                 break;
             case 4:
-            exit(0);
+                myList.print();
+                break;
+            case 5:
+                exit(0);
                 break;
         }
-        
-        
+                
     }
-    //No menus, all input based, if A is in front of an item, add, if D is in front of an item, delete, if M, Modify
-    //Two ways: One you can input items individually and go back and edit\delete them later
-    //or you can input them all at once with a string stream and parse the string with tokens like in 
-    //chronos video
-
     return 0;
 }

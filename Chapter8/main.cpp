@@ -49,7 +49,6 @@ int main() {
 
     myfile.close();
     return 0;
-    return 0;
 }
 /*
 Write a program that reads a file consisting of students’ test scores in the range 0–200. It should then determine the number of students having 

@@ -6,7 +6,7 @@ using namespace std;
 
 class toDoList{
 public:
-    enum itemStatus{Open, Closed, Deleted};
+    enum itemStatus{Open, Closed, Deleted};     
     struct entries{
         string listEntry;
         //string note;

@@ -1,0 +1,5 @@
+/home/sammy/practice/ToDoList/CMakeFiles/rebuild_cache.dir
+/home/sammy/practice/ToDoList/CMakeFiles/ToDoList.tar.dir
+/home/sammy/practice/ToDoList/CMakeFiles/edit_cache.dir
+/home/sammy/practice/ToDoList/CMakeFiles/test.dir
+/home/sammy/practice/ToDoList/CMakeFiles/ToDoList.dir

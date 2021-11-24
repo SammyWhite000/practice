@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sammy/practice/ToDoList/List.h
+iostream
+-
+string
+-
+sstream
+-
+list
+-
+
+/home/sammy/practice/ToDoList/main.cc
+iostream
+-
+string
+-
+sstream
+-
+list
+-
+List.h
+/home/sammy/practice/ToDoList/List.h
+

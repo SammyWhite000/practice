@@ -2,9 +2,14 @@
 "https://github.com/sainnhe/everforest/blob/master/doc/everforest.txt
 call plug#begin('~/.vim/plugged')
 
+Plug 'rakr/vim-one'
+
 Plug 'sainnhe/everforest'
 
 call plug#end()
+
+"Terminal Color Schemes
+"https://mayccoll.github.io/Gogh/
 
 filetype plugin indent on
 " show existing tab with 4 spaces width
@@ -18,12 +23,12 @@ set expandtab
 "set number
 
 
-"FOR COLORSCHEME
+"FOR COLORSCHEME EVERFOREST!!!!!
 if has('termguicolors')
     set termguicolors
 endif
 " For dark version.
-set background=dark
+"set background=dark
 "Used for itallics, 1 = true, 0 = flase
 let g:everforest_enable_italic = 1
 " For light version.
@@ -33,4 +38,7 @@ let g:everforest_enable_italic = 1
 " Available values: 'hard', 'medium'(default), 'soft'
 let g:everforest_background = 'hard'
 colorscheme everforest
+set background=dark
 
+"FOR COLORSCHEME VIM-ONE!!!!!!!
+"let g:airline_theme='one'
